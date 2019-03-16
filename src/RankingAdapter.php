@@ -11,11 +11,11 @@ use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Redis;
 
 /**
- * Class Ranking
+ * 榜单适配器
  *
  * @author Tongle Xu <xutongle@gmail.com>
  */
-class Ranking
+class RankingAdapter
 {
     /**
      * @var string

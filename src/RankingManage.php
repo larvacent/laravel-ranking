@@ -35,10 +35,10 @@ class RankingManage
     /**
      * 获取榜单实例
      * @param string $ranking
-     * @return Ranking
+     * @return RankingAdapter
      */
     public function get($ranking)
     {
-        return new Ranking($ranking, $this->app['config']["services.ranking.redis"]??'default');
+        return new RankingAdapter($ranking, $this->app['config']["services.ranking.redis"]??'default');
     }
 }

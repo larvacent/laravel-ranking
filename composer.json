@@ -19,7 +19,10 @@
     "laravel": {
       "providers": [
         "Larva\\Ranking\\RankingServiceProvider"
-      ]
+      ],
+      "aliases": {
+        "Ranking": "Larva\\Ranking\\Facades\\Ranking"
+      }
     }
   },
   "prefer-stable": true
