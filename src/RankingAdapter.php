@@ -87,7 +87,7 @@ class RankingAdapter
      * @param int $stop 结束行
      * @return array
      */
-    protected function getOneDayRankings($date, $start, $stop)
+    public function getOneDayRankings($date, $start, $stop)
     {
         $key = $this->ranking . $date;
         return $this->redis->zrevrange($key, $start, $stop, ['withscores' => true]);
@@ -101,7 +101,7 @@ class RankingAdapter
      * @param int $stop 结束行
      * @return mixed
      */
-    protected function getMultiDaysRankings($dates, $outKey, $start, $stop)
+    public function getMultiDaysRankings($dates, $outKey, $start, $stop)
     {
         $keys = array_map(function ($date) {
             return $this->ranking . $date;
