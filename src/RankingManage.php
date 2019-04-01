@@ -24,7 +24,7 @@ class RankingManage
     /**
      * Create a new filesystem manager instance.
      *
-     * @param  \Illuminate\Contracts\Foundation\Application $app
+     * @param \Illuminate\Contracts\Foundation\Application $app
      * @return void
      */
     public function __construct($app)
@@ -39,6 +39,6 @@ class RankingManage
      */
     public function get($ranking)
     {
-        return new RankingAdapter($ranking, $this->app['config']["services.ranking.redis"]??'default');
+        return new RankingAdapter($ranking, $this->app['config']["services.ranking.redis"] ?? 'default');
     }
 }

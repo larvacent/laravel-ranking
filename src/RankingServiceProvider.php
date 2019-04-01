@@ -22,26 +22,14 @@ class RankingServiceProvider extends ServiceProvider
     protected $defer = true;
 
     /**
-     * Bootstrap services.
-     *
-     * @return void
-     */
-    public function boot()
-    {
-
-    }
-
-    /**
      * Register services.
      *
      * @return void
      */
     public function register()
     {
-        $this->app->singleton(RankingManage::class, function () {
+        $this->app->singleton('ranking', function () {
             return new RankingManage($this->app);
         });
-
-        $this->app->alias(RankingManage::class, 'ranking');
     }
 }
